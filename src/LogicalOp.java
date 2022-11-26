@@ -94,13 +94,15 @@ public class LogicalOp {
         float sum = 0;
         int count = 0;
         while (first <= second) {
-            sum = sum + first;
-            first += 7;
-            count++;
+            if (first % 7 == 0) {
+                sum += first;
+                count++;
+            }
+            first++;
         }
         return sum / count;
-
     }
+
 
     // 9. Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
     public void fibonacci() {
@@ -116,7 +118,42 @@ public class LogicalOp {
             i++;
         }
     }
+
+    public void printCozaLozaWoza() {
+        int i = 1;
+        while (i <= 110) {
+            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                System.out.print("CozaLozaWoza, ");
+            } else if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("CozaLoza, ");
+            } else if (i % 3 == 0 && i % 7 == 0) {
+                System.out.print("CozaWoza, ");
+            } else if (i % 5 == 0 && i % 7 == 0) {
+                System.out.print("WozaLoza, ");
+            } else if (i % 3 == 0) {
+                System.out.print("Coza, ");
+            } else if (i % 5 == 0) {
+                System.out.print("Loza, ");
+            } else if (i % 7 == 0) {
+                System.out.print("Woza, ");
+            } else {
+                System.out.print(i + ", ");
+            }
+            if (i % 11 == 0) {
+                System.out.println();
+            }
+            i++;
+
+        }
+    }
+
 }
+
+
+
+
+
+
 
 
 

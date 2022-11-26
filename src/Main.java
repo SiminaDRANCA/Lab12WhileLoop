@@ -10,5 +10,6 @@ public class Main {
         System.out.println(logicalOp.addAndAverage(11, 8899));
         System.out.println(logicalOp.boltz(2, 22));
         logicalOp.fibonacci();
+        logicalOp.printCozaLozaWoza();
     }
 }
